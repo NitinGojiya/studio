@@ -1,0 +1,184 @@
+/* grid c1 */
+.grid-c1 {
+  display: flex;
+  flex-direction: column;
+}
+.grid-c1-content {
+  background: linear-gradient(
+      114.07deg,
+      rgba(66, 59, 55, 0.6) 3.49%,
+      rgba(66, 59, 55, 0) 34.7%
+    ),
+    linear-gradient(138.58deg, rgba(59, 43, 30, 0.37) 43.56%, #fea767 112.68%);
+  flex: 1;
+  border-radius: 10px;
+  padding: 16px;
+}
+.grid-c1-content .lg-value {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #c7c4c6;
+}
+.grid-c1-content .expiry-text {
+  margin-bottom: 6px;
+}
+.grid-c1-content .card-wrapper {
+  display: flex;
+}
+.grid-c1-content .card-pin-hidden {
+  font-size: 32px;
+  margin-right: 8px;
+}
+.grid-c1-content span {
+  color: #8a8587;
+}
+.grid-c1 .card-logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-c1 .card-logo {
+  display: flex;
+}
+.grid-c1 .logo-shape1,
+.grid-c1 .logo-shape2 {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+}
+.grid-c1 .logo-shape1 {
+  background-color: var(--clr-scarlet-v1);
+  margin-right: -15px;
+  z-index: 0;
+}
+.grid-c1 .logo-shape2 {
+  background-color: var(--clr-yellow);
+}
+.order{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .grid-c1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+
+
+.buttona {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+
+.buttona, .buttona__icon, .buttona__text {
+  transition: all 0.3s;
+}
+
+.buttona .buttona__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.buttona .buttona__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttona .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.buttona:hover {
+  background: #34974d;
+}
+
+.buttona:hover .buttona__text {
+  color: transparent;
+}
+
+.buttona:hover .buttona__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.buttona:active .buttona__icon {
+  background-color: #2e8644;
+}
+
+.buttona:active {
+  border: 1px solid #2e8644;
+}

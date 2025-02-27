@@ -1,0 +1,44 @@
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    /* background-color: red; */
+}
+
+.left{
+    color: #fff;
+    background-color: green;
+    font-weight: 500;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.right{
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+}
+
+
+@media (max-width: 804px) {
+    .about{
+      
+        flex-direction: column;
+      
+    }
+    .left{
+        background-color: green;
+        width: 300px;
+        height: 500px;
+    }
+    .right{
+        width: 300px;
+        height: 500px;
+        background-color: gray;
+    }
+}

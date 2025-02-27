@@ -1,0 +1,665 @@
+[{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f54"
+  },
+  "city": "Ahmedabad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f55"
+  },
+  "city": "Amreli",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f56"
+  },
+  "city": "Anand",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f57"
+  },
+  "city": "Ankleshwar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f58"
+  },
+  "city": "Bharuch",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f59"
+  },
+  "city": "Bhavnagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5a"
+  },
+  "city": "Bhuj",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5b"
+  },
+  "city": "Cambay",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5c"
+  },
+  "city": "Dahod",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5d"
+  },
+  "city": "Deesa",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5e"
+  },
+  "city": "Dharampur",
+  "state": " India"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f5f"
+  },
+  "city": "Dholka",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f60"
+  },
+  "city": "Gandhinagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f61"
+  },
+  "city": "Godhra",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f62"
+  },
+  "city": "Himatnagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f63"
+  },
+  "city": "Idar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f64"
+  },
+  "city": "Jamnagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f65"
+  },
+  "city": "Junagadh",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f66"
+  },
+  "city": "Kadi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f67"
+  },
+  "city": "Kalavad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f68"
+  },
+  "city": "Kalol",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f69"
+  },
+  "city": "Kapadvanj",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6a"
+  },
+  "city": "Karjan",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6b"
+  },
+  "city": "Keshod",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6c"
+  },
+  "city": "Khambhalia",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6d"
+  },
+  "city": "Khambhat",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6e"
+  },
+  "city": "Kheda",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f6f"
+  },
+  "city": "Khedbrahma",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f70"
+  },
+  "city": "Kheralu",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f71"
+  },
+  "city": "Kodinar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f72"
+  },
+  "city": "Lathi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f73"
+  },
+  "city": "Limbdi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f74"
+  },
+  "city": "Lunawada",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f75"
+  },
+  "city": "Mahesana",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f76"
+  },
+  "city": "Mahuva",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f77"
+  },
+  "city": "Manavadar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f78"
+  },
+  "city": "Mandvi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f79"
+  },
+  "city": "Mangrol",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7a"
+  },
+  "city": "Mansa",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7b"
+  },
+  "city": "Mehmedabad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7c"
+  },
+  "city": "Modasa",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7d"
+  },
+  "city": "Morvi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7e"
+  },
+  "city": "Nadiad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f7f"
+  },
+  "city": "Navsari",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f80"
+  },
+  "city": "Padra",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f81"
+  },
+  "city": "Palanpur",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f82"
+  },
+  "city": "Palitana",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f83"
+  },
+  "city": "Pardi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f84"
+  },
+  "city": "Patan",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f85"
+  },
+  "city": "Petlad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f86"
+  },
+  "city": "Porbandar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f87"
+  },
+  "city": "Radhanpur",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f88"
+  },
+  "city": "Rajkot",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f89"
+  },
+  "city": "Rajpipla",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8a"
+  },
+  "city": "Rajula",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8b"
+  },
+  "city": "Ranavav",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8c"
+  },
+  "city": "Rapar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8d"
+  },
+  "city": "Salaya",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8e"
+  },
+  "city": "Sanand",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f8f"
+  },
+  "city": "Savarkundla",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f90"
+  },
+  "city": "Sidhpur",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f91"
+  },
+  "city": "Sihor",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f92"
+  },
+  "city": "Songadh",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f93"
+  },
+  "city": "Surat",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f94"
+  },
+  "city": "Talaja",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f95"
+  },
+  "city": "Thangadh",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f96"
+  },
+  "city": "Tharad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f97"
+  },
+  "city": "Umbergaon",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f98"
+  },
+  "city": "Umreth",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f99"
+  },
+  "city": "Una",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9a"
+  },
+  "city": "Unjha",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9b"
+  },
+  "city": "Upleta",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9c"
+  },
+  "city": "Vadnagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9d"
+  },
+  "city": "Vadodara",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9e"
+  },
+  "city": "Valsad",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13f9f"
+  },
+  "city": "Vapi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa0"
+  },
+  "city": "Vapi",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa1"
+  },
+  "city": "Veraval",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa2"
+  },
+  "city": "Vijapur",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa3"
+  },
+  "city": "Viramgam",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa4"
+  },
+  "city": "Visnagar",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa5"
+  },
+  "city": "Vyara",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa6"
+  },
+  "city": "Wadhwan",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa7"
+  },
+  "city": "Wankaner",
+  "state": "Gujarat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa8"
+  },
+  "city": "Adalaj",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fa9"
+  },
+  "city": "Adityana",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13faa"
+  },
+  "city": "Alang",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fab"
+  },
+  "city": "Ambaji",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fac"
+  },
+  "city": "Ambaliyasan",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fad"
+  },
+  "city": "Andada",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fae"
+  },
+  "city": "Anjar",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13faf"
+  },
+  "city": "Anklav",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fb0"
+  },
+  "city": "Antaliya",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fb1"
+  },
+  "city": "Arambhada",
+  "state": "Gujrat"
+},
+{
+  "_id": {
+    "$oid": "67a6ec33812667a14ef13fb2"
+  },
+  "city": "Atul",
+  "state": "Gujrat"
+}]

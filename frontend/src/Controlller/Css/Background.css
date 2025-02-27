@@ -1,0 +1,10 @@
+.bgback{
+    background-image: url('../Images/back.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.bghome{
+    background-image: url('../Images/logo3.png');
+    background-position: center;
+    background-size: cover;
+}
