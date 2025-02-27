@@ -16,7 +16,7 @@ const Bookindetail = ({ userl }) => {
   }, []);
   const [status, setStatus] = useState("pending");
   return (
-    <div className="bg-slate-900 p-10">
+    <div className="bg-[#29221d] p-10">
       <div className='flex justify-end'>
         <div className="dropdown dropdown-left">
           <div tabIndex={0} role="button" className=" m-1 btn btn-outline btn-accent">

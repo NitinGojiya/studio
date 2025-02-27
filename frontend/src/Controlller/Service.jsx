@@ -16,11 +16,11 @@ const Service = () => {
         <p>We provide high-quality services to help your business grow.</p>
       </header>
 
-      <section className="services-list bg-slate-900">
+      <section className="services-list ">
         <h2>Our Expertise</h2>
         <div className="services">
           {services.map((service, index) => (
-            <div key={index} className="service-item">
+            <div key={index} className="service-item hover:translate-x-4">
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>

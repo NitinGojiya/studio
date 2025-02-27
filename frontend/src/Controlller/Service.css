@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+ 
   }
   
   .header {
@@ -24,7 +24,7 @@
   .services-list h2 {
     margin-bottom: 30px;
     font-size: 24px;
-    color: #333;
+    color: #f8f8f8;
   }
   
   .services {
@@ -34,18 +34,26 @@
   }
   
   .service-item {
-    background-color: white;
+    background: linear-gradient(
+      114.07deg,
+      rgba(66, 59, 55, 0.6) 3.49%,
+      rgba(66, 59, 55, 0) 34.7%
+    ),
+    linear-gradient(138.58deg, rgba(59, 43, 30, 0.37) 43.56%, #fea767 112.68%);
+  flex: 1;
+  border-radius: 10px;
+  padding: 16px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .service-item h3 {
-    color: #007BFF;
+    color: #e3d5d5;
   }
   
   .service-item p {
-    color: #666;
+    color: #eb9008;
   }
   
   .footer {

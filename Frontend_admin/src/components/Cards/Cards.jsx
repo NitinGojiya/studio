@@ -93,14 +93,15 @@ const Cards = ({email,status}) => {
                 
                 <div className="grid-one-item grid-common grid-c1">
                     <div className="grid-c-title">
-                        <h3 className="grid-c-title-text">{user.customername}</h3>
+                        <h3 className="grid-c-title-text">Name:{user.customername}</h3>
                        
 
                     </div>
                     <div className="grid-c1-content">
-                        <p>{user.email}</p>
-                        <p>{user.mobile}</p>
-                        <div className="lg-value">{user.address}</div>
+                        <p>Email:-{user.email}</p>
+                        <p>Mobile :{user.mobile}</p>
+                        <p>Addrss :{user.address}</p>
+                        <div className="lg-value">Name:-{user.customername}</div>
 
                         <div className="card-wrapper">
 

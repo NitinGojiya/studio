@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import Home from "../../components/ContentMain/Home";
 import { useEffect, useState } from "react";
 import History from "../../components/ContentMain/History";
+import Transactions from "../../components/Transactions/Transactions";
 const Content = () => {
   
 const queryParams = new URLSearchParams(window.location.search);
@@ -55,7 +56,7 @@ const [studio,setStudio]=useState();
         <Route path="/home" element={<ContentMain  />} />
         <Route path="/booking" element={<Booking  email={studio?.email}/>} />
         <Route path="/History" element={<History  email={studio?.email}/>} />
-        <Route path="/profile" element={<ContentMain />} />
+        <Route path="/profile" element={<Transactions user={user}/>} />
         <Route path="/Settings" element={<ContentMain />} />
       </Routes>
     </Router>

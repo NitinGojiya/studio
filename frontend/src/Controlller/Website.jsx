@@ -4,6 +4,8 @@ import Images from './Images/logo3.png';
 import Image from './Image';
 import Video from './Video';
 import Booking from './Booking';
+import Social from './Social';
+import './Css/Background.css'
 const Website = ({userl}) => {
     const [studio, setStudio] = useState();
     const [loding, setLoding] = useState(true);
@@ -30,7 +32,7 @@ const Website = ({userl}) => {
     return (
         <>
 
-            <div className=''>
+            <div className='bgwebsite'>
                 <div className=" ">
 
                     {
@@ -49,25 +51,28 @@ const Website = ({userl}) => {
 
 
 
-                                <div className="hero bg-base-200 min-h-screen flex flex-col">
+                                <div className="hero min-h-screen flex flex-col">
                                     <div className="hero-content flex-col lg:flex-row-reverse">
                                         <img height="200px" width="200px"
                                             src={`http://localhost:8080${studio.imageUrl}`}
                                             className="max-w-sm rounded-lg shadow-2xl" />
                                         <div>
-                                            <h1 className="md:text-5xl font-bold">{studio.name}</h1>
+                                            <h1 className="md:text-5xl font-bold text-yellow-800">{studio.name}</h1>
                                             <p className="py-6">
                                                 {studio.address}
                                             </p>
                                             <button className="btn btn-outline btn-accent" onClick={()=>document.getElementById('my_modal_5').showModal()}>Book Now</button>
                                             <Booking userl={userl} name={studio.name}  email={studio.email} id={studio._id} smobile={studio.mobile}/>
                                         </div>
-
+                                      
                                     </div>
+                                    <div className='m-10'>
+                                            <Social/>
+                                        </div>
                                   {/* imagesectin */}
                                     <div className='mt-10'>
                                        <div className=''>
-                                        <p className='text-3xl font-bold'>Photos Demo</p>
+                                        <p className='text-3xl font-bold  text-yellow-800  border-b-4'>Photos Demo</p>
                                         </div>
                                         <div>
                                             <Image/>
@@ -77,7 +82,7 @@ const Website = ({userl}) => {
                                             {/* imagesectin */}
                                     <div className='mt-10'>
                                        <div className=''>
-                                        <p className='text-3xl font-bold'>Video's Demo</p>
+                                        <p className='text-3xl font-bold  text-yellow-800 border-b-4'>Video's Demo</p>
                                         </div>
                                         <div>
                                            <Video/>

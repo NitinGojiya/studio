@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Login from './Login'
 
-const Navbar = ({ login, setLogin, user, setUser,admin }) => {
+const Navbar = ({ login, setLogin, user, setUser, admin }) => {
 
   const logout = () => {
     localStorage.setItem("login", "false")
@@ -11,8 +11,8 @@ const Navbar = ({ login, setLogin, user, setUser,admin }) => {
 
   return (
     <>
-   
-      <div className="navbar bg-slate-900 md:text-white font-serif font-bold sticky top-0 z-50">
+
+      <div className="navbar bg-[#29221d] md:text-white font-serif font-bold sticky top-0 z-50">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,9 +39,21 @@ const Navbar = ({ login, setLogin, user, setUser,admin }) => {
                 :
                 <></>
               }
+              {login === "true"
+                ?
+                <li><a href='/orderdetails'>Your Booking Details</a></li>
+                :
+                <></>
+              }
               <li><a href='/service'>Service</a></li>
               <li><a href='/aboutus'>About us</a></li>
-              <li><a>Contact</a></li>
+              {login === "true"
+                ?
+                <></>
+                :
+                <li><a href='/signup'>Signup</a></li>
+               
+              }
 
 
             </ul>
@@ -58,7 +70,7 @@ const Navbar = ({ login, setLogin, user, setUser,admin }) => {
                 :
                 <></>
               }
-               {login === "true"
+              {login === "true"
                 ?
                 <li><a href='/orderdetails'>Your Booking Details</a></li>
                 :
@@ -66,13 +78,22 @@ const Navbar = ({ login, setLogin, user, setUser,admin }) => {
               }
               <li><a href='/service'>Service</a></li>
               <li><a href='/aboutus'>About us</a></li>
-              <li><a>Contact</a></li>
+              {login === "true"
+                ?
+                <></>
+                :
+                <li><a href='/signup'>Signup</a></li>
+               
+              }
 
             </ul>
           </div>
           {
             login === "true" ? <a className="btn btn-outline btn-accent" href='/' onClick={logout}>
-              logout
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+              </svg>
+
 
             </a>
               :
@@ -85,8 +106,8 @@ const Navbar = ({ login, setLogin, user, setUser,admin }) => {
           <Login login={login} setLogin={setLogin} user={user} setUser={setUser} />
         </div>
       </div>
-     
-  
+
+
     </>
   )
 }

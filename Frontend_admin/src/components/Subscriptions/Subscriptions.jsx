@@ -23,7 +23,7 @@ const Subscriptions = () => {
                                 <p className="text text-silver-v1">{ subscription.title } <span>due { subscription.due_date }</span></p>
                             </div>
                             <div className="grid-item-r">
-                                <span className="text-silver-v1">$ { subscription.amount }</span>
+                                <span className="text-silver-v1">₹ { subscription.amount }</span>
                             </div>
                         </div>
                     ))

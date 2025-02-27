@@ -36,7 +36,7 @@ function App() {
     <Routes>
      
       <Route path="/" element={ <Home /> } />
-      <Route path="/signup" element={ <Signup/>} />
+      <Route path="/signup" element={ login==="false" ?<Signup/>:<Studiopage/>} />
 
       <Route path="/studio" element={ login==="false" ?<Signup/>:<Studiopage/>} />
       <Route path="/orderdetails" element={<Bookindetail userl={user} /> }/>

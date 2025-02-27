@@ -27,7 +27,7 @@ const Studio = ({ city, title }) => {
         navigate('/studioweb', { state: { message: id } });
     }
     return (
-        <div className='flex justify-center bg-slate-900 p-10'>
+        <div className='flex justify-center bg-[#29221d] p-10'>
             <div className=" grid grid-cols-1 md:grid-cols-5 gap-4">
 
                 {

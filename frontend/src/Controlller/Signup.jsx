@@ -34,18 +34,18 @@ const Signup = () => {
         const address = e.target.address.value;
         const mobile = e.target.mobile.value;
         const password = e.target.password.value;
-        const email = e.target.email.value;
+        const email1 = e.target.email.value;
         const signupdata =
         {
             "name": name,
             "address": address,
             "password": password,
             "mobile": mobile,
-            "email": email,
+            "email": email1,
 
         }
 
-
+        if (votp) {
         try {
             const respose = await fetch('http://localhost:8080/api/studio/create',
                 {
@@ -71,7 +71,7 @@ const Signup = () => {
         } catch (error) {
             console.log("errro", error)
         }
-
+    }
         //  console.log(signupdata)
 
     }
@@ -92,11 +92,11 @@ const Signup = () => {
         formData.append("password", e.target.password.value);
         formData.append("mobile", e.target.mobile.value);
         formData.append("email", e.target.email.value);
-       
+
         formData.append("address", e.target.address.value);
         formData.append("file", file); // Image file
         // setOtpfield(true)
-       
+
         if (votp) {
             try {
                 const response = await fetch("http://localhost:8080/api/studio/createstudio", {
@@ -115,34 +115,33 @@ const Signup = () => {
                 console.log("Error:", error);
             }
         }
-       
+
     };
 
-    const changeemail=(e)=>{
+    const changeemail = (e) => {
         setEmail(e.target.value)
     }
-    const sendotp =async(e)=>{
+    const sendotp = async (e) => {
         e.preventDefault();
-        if(email)
-        {
+        if (email) {
             try {
                 const response = await axios.post("http://localhost:8080/send-otp", { email });
                 if (response.data.success) {
-                   
+
                     alert("OTP sent! Check your email.");
                     document.getElementById("my_modal_3").showModal();
                 }
             } catch (error) {
                 alert("Failed to send OTP.");
             }
-           
+
         }
-        else{
+        else {
             alert("input email ")
         }
     }
-    const [otp,setOtp]=useState();
-    const otpverify =async (e) => {
+    const [otp, setOtp] = useState();
+    const otpverify = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post("http://localhost:8080/verify-otp", { email, otp });
@@ -156,7 +155,7 @@ const Signup = () => {
         } catch (error) {
             alert("Verification failed.");
         }
-        
+
     }
 
     return (
@@ -200,6 +199,7 @@ const Signup = () => {
 
                     {
                         userType === "customer" ?
+                        <>
                             <form onSubmit={handelsubmitlogin} className='space-y-3'>
                                 <div className=''>
                                     <div className='flex flex-col gap-5 pb-5'>
@@ -210,7 +210,7 @@ const Signup = () => {
                                             <input type="text" placeholder="Your Mobile " name='mobile' className="input input-bordered w-full max-w-xs" />
                                         </div>
                                         <div>
-                                            <input type="text" placeholder="Email " name='email' className="input input-bordered w-full max-w-xs" />
+                                            <input type="text" placeholder="Email " onChange={changeemail} name='email' className="input input-bordered w-full max-w-xs" />
                                         </div>
                                         <div>
                                             <input type="text" placeholder="Password " name='password' className="input input-bordered w-full max-w-xs " />
@@ -219,12 +219,38 @@ const Signup = () => {
                                             <input type="text" placeholder="address " name='address' className="input input-bordered w-full max-w-xs" />
                                         </div>
                                         <div className='flex items-center justify-center'>
-                                            <button className='btn btn-outline btn-success'>Signup</button>
+
+                                            {votp ? <button className='btn btn-outline btn-success'>Signup</button> : <></>}
                                         </div>
 
                                     </div>
                                 </div>
                             </form>
+       <div>
+                                    {
+                                        votp === false
+                                            ?
+                                            <button className='btn btn-outline btn-success' onClick={sendotp}>send otp</button>
+                                            : <></>
+                                    }
+                                </div>
+                                
+                                {/* otp box */}
+
+                                <dialog id="my_modal_3" className="modal">
+                                    <div className="modal-box">
+                                        <form method="dialog">
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        </form>
+                                        <h3 className="font-bold text-lg">Verify Otp</h3>
+                                        <h3 className="font-bold text-lg">{email}</h3>
+                                        <input type='text' name='otp' className='input input-bordered w-full max-w-xs' onChange={(e) => { setOtp(e.target.value) }} ></input>
+                                        <button className='btn btn-outline btn-warning' onClick={otpverify}>Verify</button>
+                                    </div>
+                                </dialog>
+                                {/* otp box end */}
+                                </>
                             :
                             <div className='flex flex-col gap-5 py-5'>
                                 <form onSubmit={handelsubmit} className='space-y-3'>
@@ -271,20 +297,20 @@ const Signup = () => {
                                         <input type="file" name='file' className="file-input file-input-bordered file-input-warning w-full max-w-xs" onChange={(e) => setFile(e.target.files[0])} />
                                     </div>
                                     <div className='flex items-center justify-center'>
-                                      { votp ? <button className='btn btn-outline btn-warning' >Signup</button>:<></>}
+                                        {votp ? <button className='btn btn-outline btn-warning' >Signup</button> : <></>}
                                     </div>
                                 </form>
                                 <div>
                                     {
-                                        votp ===false
-                                        ?
-                                <button className='btn btn-outline btn-warning' onClick={sendotp}>send otp</button>
-                                   :<></>
-                            }
+                                        votp === false
+                                            ?
+                                            <button className='btn btn-outline btn-warning' onClick={sendotp}>send otp</button>
+                                            : <></>
+                                    }
                                 </div>
 
                                 {/* otp box */}
-                                
+
                                 <dialog id="my_modal_3" className="modal">
                                     <div className="modal-box">
                                         <form method="dialog">
@@ -293,7 +319,7 @@ const Signup = () => {
                                         </form>
                                         <h3 className="font-bold text-lg">Verify Otp</h3>
                                         <h3 className="font-bold text-lg">{email}</h3>
-                                        <input type='text' name='otp' className='input input-bordered w-full max-w-xs' onChange={(e)=>{setOtp(e.target.value)}} ></input>
+                                        <input type='text' name='otp' className='input input-bordered w-full max-w-xs' onChange={(e) => { setOtp(e.target.value) }} ></input>
                                         <button className='btn btn-outline btn-warning' onClick={otpverify}>Verify</button>
                                     </div>
                                 </dialog>

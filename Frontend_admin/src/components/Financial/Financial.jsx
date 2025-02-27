@@ -10,8 +10,8 @@ const Financial = () => {
             </button>
         </div>
         <div className="grid-c8-content">
-            <p className="text text-silver-v1">Ipsum dolor sit amet consectetur, adipisicing elit.
-                Iste, vitae.....</p>
+            <p className="text text-silver-v1">No  any ....
+               .....</p>
         </div>
     </div>
   )

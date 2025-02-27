@@ -12,7 +12,7 @@ const ContentMain = () => {
   return (
     <div className="main-content-holder">
         <div className="content-grid-one">
-            <Cards />
+           
             <Transactions />
             <Report />
         </div>
@@ -21,7 +21,7 @@ const ContentMain = () => {
             <div className="grid-two-item">
               <div className="subgrid-two">
                 <Subscriptions />
-                <Savings />
+               
               </div>
             </div>
 
