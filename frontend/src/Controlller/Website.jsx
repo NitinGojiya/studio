@@ -75,7 +75,7 @@ const Website = ({userl}) => {
                                         <p className='text-3xl font-bold  text-yellow-800  border-b-4'>Photos Demo</p>
                                         </div>
                                         <div>
-                                            <Image/>
+                                            <Image  email={studio.email}/>
                                         </div>
                                     </div>
                                      {/* video Section End */}

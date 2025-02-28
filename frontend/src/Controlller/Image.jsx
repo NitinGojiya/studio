@@ -1,26 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from './Images/download.jpeg'
-const Image = () => {
+import axios from 'axios'
+const Image = ({email}) => {
+    const [data, setData] = useState([]);
 
+    useEffect(() => {
+        axios.get("http://localhost:8080/photos")
+            .then(res => setData(res.data))
+            .catch(err => console.error(err));
+    }, [data]);
   return (
-    <div className='flex flex-wrap   gap-5 w-[1080px]'>
-        <div >
-            <img src={logo} className='h-[200px] w-[150px] image-full border-black border-4' alt='image'></img>
+  
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 p-5">
+       {data.map(photo => (
+           email=== photo.email
+           ?      
+        <div key={photo._id}>
+          <img
+            className="h-40 w-full max-w-full rounded-lg object-cover object-center"
+            src={`http://localhost:8080${photo.path}`}
+            alt="gallery-photo"
+          />
         </div>
-        <div>
-            <img src={logo} className='h-[200px] w-[150px] image-full border-black border-4' alt='image'></img>
-        </div>
-        <div>
-            <img src={logo} className='h-[200px] w-[150px] image-full border-black border-4' alt='image'></img>
-        </div>
-        <div>
-            <img src={logo} className='h-[200px] w-[150px] image-full border-black border-4' alt='image'></img>
-        </div>
-        <div>
-            <img src={logo} className='h-[200px] w-[150px] image-full border-black border-4' alt='image'></img>
-        </div>
-       
+        :<></>
+      ))}
     </div>
+       
+   
   )
 }
 

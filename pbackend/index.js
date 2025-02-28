@@ -35,8 +35,56 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage });
 
+const upload = multer({ storage });
+// imageupload
+const PhotoSchema = new mongoose.Schema({
+  name: String,
+  path: String,
+  email: { type: String, required: true },
+  uploadedAt: { type: Date, default: Date.now }
+});
+const Photo = mongoose.model('Photo', PhotoSchema);
+
+app.post('/upload', upload.single('photo'), async (req, res) => {
+  try {
+    const { email } = req.body; // Get email from the request body
+
+        if (!email) {
+            return res.status(400).json({ error: 'Email is required' });
+        }
+      const newPhoto = new Photo({
+        
+          name: req.file.originalname,
+          path: `/uploads/${req.file.filename}`,
+          email: email,
+      });
+      await newPhoto.save();
+      res.json({ message: 'File uploaded successfully', file: newPhoto });
+  } catch (err) {
+      res.status(500).json({ error: err.message });
+  }
+});
+app.get('/photos', async (req, res) => {
+  const photos = await Photo.find();
+  res.json(photos);
+});
+
+app.delete('/photos/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const photo = await Photo.findById(id);
+
+      if (!photo) {
+          return res.status(404).json({ message: 'Photo not found' });
+      }
+      await Photo.findByIdAndDelete(id);
+      res.json({ message: 'Photo deleted successfully' });
+  } catch (err) {
+      res.status(500).json({ error: err.message });
+  }
+});
+// imageupload end
 // Serve Static Files (Uploaded Images)
 app.use("/uploads", express.static("uploads"));
 
