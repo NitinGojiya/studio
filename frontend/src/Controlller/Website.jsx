@@ -51,28 +51,34 @@ const Website = ({userl}) => {
 
 
 
-                                <div className="hero min-h-screen flex flex-col">
-                                    <div className="hero-content flex-col lg:flex-row-reverse">
-                                        <img height="200px" width="200px"
-                                            src={`http://localhost:8080${studio.imageUrl}`}
-                                            className="max-w-sm rounded-lg shadow-2xl" />
+                                <div className="p-10">
+                                    <div className="flex gap-5 justify-center items-center">
                                         <div>
-                                            <h1 className="md:text-5xl font-bold text-yellow-800">{studio.name}</h1>
-                                            <p className="py-6">
-                                                {studio.address}
+                                        <img height="500px" width="200px"
+                                            src={`http://localhost:8080${studio.imageUrl}`}
+                                            className="image-full rounded-lg shadow-2xl h-[300px] w-[400px]" />
+                                        </div>
+                                      
+                                        <div className='text-wrap w-[500px]'>
+                                            <h1 className="md:text-3xl font-bold text-white text-wrap">Welcome to {studio.name} Studio – Capturing Your Precious Moments</h1>
+                                            <p className="py-6 text-3xl font-bold text-white text-wrap">
+                                             Mobile:   {studio.mobile}
                                             </p>
-                                            <button className="btn btn-outline btn-accent" onClick={()=>document.getElementById('my_modal_5').showModal()}>Book Now</button>
+                                            <p className='font-bold text-white text-wrap'>
+                                            At {studio.name} , we specialize in bringing your memories to life through high-quality photography and videography. Whether it’s a wedding, birthday, corporate event, or a personal photoshoot, we are here to create timeless visuals that tell your unique story.
+                                            </p>
+                                            <button className="btn btn-outline btn-accent mt-5" onClick={()=>document.getElementById('my_modal_5').showModal()}>Book Now</button>
                                             <Booking userl={userl} name={studio.name}  email={studio.email} id={studio._id} smobile={studio.mobile}/>
                                         </div>
                                       
                                     </div>
                                     <div className='m-10'>
                                             <Social/>
-                                        </div>
+                                    </div>
                                   {/* imagesectin */}
                                     <div className='mt-10'>
                                        <div className=''>
-                                        <p className='text-3xl font-bold  text-yellow-800  border-b-4'>Photos Demo</p>
+                                        <p className='text-3xl font-bold text-white border-b-4'>Photos Demo</p>
                                         </div>
                                         <div>
                                             <Image  email={studio.email}/>
@@ -82,10 +88,10 @@ const Website = ({userl}) => {
                                             {/* imagesectin */}
                                     <div className='mt-10'>
                                        <div className=''>
-                                        <p className='text-3xl font-bold  text-yellow-800 border-b-4'>Video's Demo</p>
+                                        <p className='text-3xl font-bold text-white  border-b-4'>Video's Demo</p>
                                         </div>
                                         <div>
-                                           <Video/>
+                                           <Video email={studio.email}/>
                                         </div>
                                     </div>
                                      {/* video Section End */}

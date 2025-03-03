@@ -17,7 +17,7 @@ const Image = ({email}) => {
            ?      
         <div key={photo._id}>
           <img
-            className="h-40 w-full max-w-full rounded-lg object-cover object-center"
+            className="h-40 w-full max-w-full rounded-lg object-cover object-center image-full hover:border-b-4"
             src={`http://localhost:8080${photo.path}`}
             alt="gallery-photo"
           />

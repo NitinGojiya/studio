@@ -1,18 +1,30 @@
-import React from 'react'
-import ReactPlayer from 'react-player'
-const Video = () => {
-    const url = [
-        {
-            "link": "https://youtu.be/H86KGFJ9Xtc?si=VxJHVIuy4gfnyNd0",
-        },
-     
-    ]
+
+import React, { useEffect, useState } from 'react'
+
+import axios from 'axios'
+const Video = ({email}) => {
+
+    const [url, setUrl] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/videos")
+            .then(res => setUrl(res.data))
+            .catch(err => console.error(err));
+    }, [url]);
     return (
         <div className='flex flex-wrap   gap-5 w-[1200px] items-center justify-center'>
             {
                 url.map((item) => (
-                   
-                        <ReactPlayer  url={item.link} />
+                    email=== item.email
+                    ?      
+                    <div>
+                               
+                    <video width="500" height="500" controls>
+                        <source src={item.videoUrl} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                :<></>
                     
                 ))
 

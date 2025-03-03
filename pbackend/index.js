@@ -7,6 +7,7 @@ import multer from 'multer';
 import path from 'path';
 import route from './routes/userroutes.js';
 import nodemailer from 'nodemailer'
+import Video from './model/Video.js';
 const app = express();
 dotenv.config();
 
@@ -112,11 +113,24 @@ app.post("/send-otp", async (req, res) => {
   otpStore[email] = otp;
 
   const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "Your OTP Code",
-      text: `Your OTP is: ${otp}`,
-  };
+    from: process.env.EMAIL_USER,
+    to: email,
+    subject: "Your OTP Code",
+    html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; text-align: center;">
+            <h2 style="color: #333;">Your One-Time Password (OTP) From Studio.com</h2>
+            <p style="font-size: 18px;">Use the following OTP to complete your verification process:</p>
+            <h3 style="background: #f8f8f8; padding: 10px; display: inline-block; border-radius: 5px;">
+                <strong>${otp}</strong>
+            </h3>
+            <p style="color: #666; font-size: 14px;">This OTP is valid for only 10 minutes. Do not share it with anyone.</p>
+            <hr style="margin: 20px 0;">
+            <p style="font-size: 12px; color: #888;">If you didn’t request this code, you can safely ignore this email.</p>
+            <p style="font-size: 12px; color: #888;">And Report  this email.<a href="nitingojiya.vercel.app">nitingojiya.vercel.app</a></p>
+        </div>
+    `,
+};
+
 
   try {
       let info = await transporter.sendMail(mailOptions);
@@ -141,6 +155,58 @@ app.post("/verify-otp", (req, res) => {
       res.status(400).json({ success: false, message: "Invalid OTP" });
   }
 });
+
+//video upload
+app.post("/videoupload", upload.single("video"), async (req, res) => {
+  if (!req.file) return res.status(400).json({ message: "No file uploaded" });
+  const { email } = req.body; // Get email from the request body
+
+        if (!email) {
+            return res.status(400).json({ error: 'Email is required' });
+        }
+  const video = new Video({
+    filename: req.file.filename,
+    videoUrl: `http://localhost:8080/uploads/${req.file.filename}`,
+    email:email,
+  });
+
+  try {
+    await video.save();
+    res.json({ message: "Video uploaded successfully", video });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error saving video" });
+  }
+});
+
+app.get("/videos", async (req, res) => {
+  try {
+    const videos = await Video.find();
+    res.json(videos);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error retrieving videos" });
+  }
+});
+
+app.delete('/videos/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const photo = await Video.findById(id);
+
+      if (!photo) {
+          return res.status(404).json({ message: 'Photo not found' });
+      }
+      await Video.findByIdAndDelete(id);
+      res.json({ message: 'video deleted successfully' });
+  } catch (err) {
+      res.status(500).json({ error: err.message });
+  }
+});
+//video upload end
+
+
+
 
 // Start Server
 app.listen(PORT, () => {
